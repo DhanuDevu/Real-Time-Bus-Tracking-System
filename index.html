@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bus Tracking</title>
+    <style>
+        .navbar {
+            background-color: #2c3e50;
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            padding: 15px;
+            margin: 0;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        #login {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        #login div {
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: #2c3e50;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        input[type='submit'] {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+  Bus Tracking System
+</nav>
+
+{% if msg %}
+  <center><h3>{{msg}}</h3></center>
+{% endif %}
+
+<div id="login">
+    <div>
+        <h2>Sign In</h2>
+        <hr>
+        <form action="/signin" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Enter Name" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            
+            <input type="submit" value="Sign In">
+        </form> 
+    </div>
+
+    <div>
+        <h2>Sign Up</h2>
+        <hr>
+        <form action="/signup" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Enter Name" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            
+            <input type="submit" value="Sign Up">
+        </form> 
+    </div>
+</div>
+</body>
+</html>

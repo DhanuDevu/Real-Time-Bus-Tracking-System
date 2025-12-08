@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bus Tracking</title>
+  <style>
+    .navbar {
+      background-color: #2c3e50;
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+      padding: 15px;
+      margin: 0;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+    }
+
+    #map {
+      height: 400px;
+      width: 80%;
+      margin: 50px auto;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+  <ul class="navbar">
+    <li><a href="#">Bus Tracking</a></li>
+    <li><a href="/">Logout</a></li>
+  </ul>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+
+
+    let map = L.map('map').setView([0, 0], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 30,
+    }).addTo(map);
+    const busIcon = L.icon({
+      iconUrl: 'https://cdn-icons-png.flaticon.com/128/416/416597.png', // Bus image
+      iconSize: [30, 30]
+    });
+    let marker = L.marker([0, 0], { icon: busIcon }).addTo(map)
+      .openPopup();
+
+    function fetchLocation() {
+      fetch('/api/buses')
+        .then(res => res.json())
+        .then(data => {
+          if (data.buses && data.buses.length > 0) {
+            // For this demo, we just track the first bus found
+            const bus = data.buses[0];
+            const lat = bus.latitude;
+            const lng = bus.longitude;
+
+            marker.setLatLng([lat, lng]);
+            map.setView([lat, lng], 15);
+          }
+        })
+        .catch(err => {
+          console.error('Error fetching data:', err);
+        });
+    }
+
+    fetchLocation();
+    setInterval(fetchLocation, 10000);
+  </script>
+
+</body>
+
+</html>
