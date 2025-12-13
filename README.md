@@ -34,3 +34,5 @@ Frontend: HTML, CSS, JavaScript
 Backend: Node.js / Python (whichever your project uses)
 Database: (If used — Firebase / MongoDB / JSON mock)
 Tracking: GPS coordinates via API
+
+I have used the IOT Tool Kit They are GPS Tracker, Power Supply, ESP32 Wifi Model,LCD Display....
