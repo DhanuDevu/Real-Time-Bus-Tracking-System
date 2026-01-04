@@ -16,7 +16,7 @@ A simple and efficient Real-Time Bus Tracking System designed to display live bu
 
 ⚙️ Lightweight and easy to deploy
 
-## 📂 Project Structure
+## 📂 Project Structure  
 /backend
     server.js
     routes/
