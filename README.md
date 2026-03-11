@@ -28,7 +28,7 @@ A simple and efficient Real-Time Bus Tracking System designed to display live bu
     assets/
     scripts/
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack     
 
 Frontend: HTML, CSS, JavaScript
 Backend: Node.js / Python (whichever your project uses)
