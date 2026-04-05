@@ -13,7 +13,7 @@ A simple and efficient Real-Time Bus Tracking System designed to display live bu
 📡 Backend API for handling location updates
 
 🎨 Clean front-end interface
-
+  
 ⚙️ Lightweight and easy to deploy
 
 ## 📂 Project Structure  
