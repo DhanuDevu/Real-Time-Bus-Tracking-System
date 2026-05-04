@@ -26,7 +26,7 @@ A simple and efficient Real-Time Bus Tracking System designed to display live bu
 /frontend
     index.html
     assets/
-    scripts/
+    scripts/   
 
 ## 🛠️ Tech Stack     
 
