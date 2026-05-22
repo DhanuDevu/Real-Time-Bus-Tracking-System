@@ -11,7 +11,7 @@ A simple and efficient Real-Time Bus Tracking System designed to display live bu
 🚍 View bus details such as bus number, speed, location   
 
 📡 Backend API for handling location updates  
-   
+      
 🎨 Clean front-end interface
   
 ⚙️ Lightweight and easy to deploy
