@@ -7,7 +7,7 @@ A simple and efficient Real-Time Bus Tracking System designed to display live bu
 🔴 Live GPS-based bus tracking
      
 🗺️ Interactive map with real-time updates              
-
+  
 🚍 View bus details such as bus number, speed, location   
 
 📡 Backend API for handling location updates  
