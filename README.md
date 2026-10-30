@@ -1,6 +1,6 @@
 # 🚌 Real-Time Bus Tracking System
 
-A simple and efficient Real-Time Bus Tracking System designed to display live bus locations, routes, and movement status. This project helps users monitor buses in real time using GPS data and provides a clean dashboard for visual tracking.
+A simple and efficient Real-Time Bus Tracking System designed to display live bus locations, routes, and movement status. This project helps users monitor buses in real time using GPS data and provides a clean dashboard for visual tracking.  
 
 ## 🚀 Features
 
